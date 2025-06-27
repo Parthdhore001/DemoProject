@@ -85,6 +85,11 @@ public class MenuDrawerSteps {
 		menuDrawerPage.clickOnCrossButton();
 		Thread.sleep(2000);
 }
+	@Then("Verify Reset App State button is enabled")
+	public void Verify_Reset_App_State_button_is_enabled()
+	{
+		assertTrue(menuDrawerPage.verifyResetAppStateButton());
+	}
 	
 }
  

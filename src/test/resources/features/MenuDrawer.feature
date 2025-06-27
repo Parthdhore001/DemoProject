@@ -68,5 +68,13 @@ Feature: Menu Items Section
     Given User is on SauceDemo login page
     When User enters username "standard_user" and password "secret_sauce"
     And User clicks on menu drawer icon
-    Then User clicks on Cross button  
+    Then User clicks on Cross button 
+    
+    @TC017 @regression
+  Scenario: Verify Reset App State is in enabled state
+    Given User is on SauceDemo login page
+    When User enters username "standard_user" and password "secret_sauce"
+    And User clicks on menu drawer icon
+    Then Verify Reset App State button is enabled
+    
     
