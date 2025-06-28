@@ -30,6 +30,10 @@ public class MenuDrawerPage {
 	@FindBy(id = "react-burger-cross-btn")
 	WebElement crossButton;
 	
+	public boolean verifyMenuDrawerIcon() {
+		return menuDrawerIcon.isDisplayed();
+	}
+	
 	public void clickOnMenuDrawer() {
 		menuDrawerIcon.click();		
 	}
@@ -73,7 +77,5 @@ public class MenuDrawerPage {
 	public void clickOnCrossButton() {
 		crossButton.click();		
 	}
-	
-	
 
 }

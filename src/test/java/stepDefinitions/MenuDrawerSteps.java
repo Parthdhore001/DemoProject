@@ -10,11 +10,18 @@ public class MenuDrawerSteps {
 	
 	MenuDrawerPage menuDrawerPage = new MenuDrawerPage();
 	
+    @Then("Menu Drawer Icon is displayed")
+    public void Menu_Drawer_Icon_is_displayed() throws InterruptedException
+    {
+    		assertTrue(menuDrawerPage.verifyMenuDrawerIcon());
+    		Thread.sleep(2000);
+    }
+	
 	@And("User clicks on menu drawer icon")
 	public void User_clicks_on_menu_drawer_icon() throws InterruptedException
 	{
 		menuDrawerPage.clickOnMenuDrawer(); 
-	Thread.sleep(2000);
+		Thread.sleep(2000);
 	}
 	
 
@@ -86,9 +93,10 @@ public class MenuDrawerSteps {
 		Thread.sleep(2000);
 }
 	@Then("Verify Reset App State button is enabled")
-	public void Verify_Reset_App_State_button_is_enabled()
+	public void Verify_Reset_App_State_button_is_enabled() throws InterruptedException
 	{
 		assertTrue(menuDrawerPage.verifyResetAppStateButton());
+		Thread.sleep(2000);
 	}
 	
 }
