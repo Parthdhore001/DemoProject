@@ -30,7 +30,7 @@ Feature: SauceDemo Login
 		When User clicks on login button
 		Then Username is required error message is displayed
 		
-	@TC006 @regression
+	@TC006 @smoke
 	Scenario: Verify the title of login page 
 		Given User is on SauceDemo login page
 		Then Verify title of the login page

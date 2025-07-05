@@ -25,10 +25,13 @@ public class LoginPage {
     @FindBy(xpath = "//div[@class='error-message-container error']")
     WebElement errorMessageForEmptyFields;
     
-    public void login(String username, String password) {
+    public void login(String username, String password) throws InterruptedException {
         usernameField.sendKeys(username);
+        Thread.sleep(3000);
         passwordField.sendKeys(password);
+        Thread.sleep(3000);
         loginButton.click();
+        Thread.sleep(3000);
     }
 
 	public boolean errorMessageIsDisplayedForInvalidUsername () {

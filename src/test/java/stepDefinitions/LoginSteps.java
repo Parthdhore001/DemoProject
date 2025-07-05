@@ -17,7 +17,7 @@ public class LoginSteps {
     }
 
     @When("User enters username {string} and password {string}")
-    public void user_enters_credentials(String username, String password) {
+    public void user_enters_credentials(String username, String password) throws InterruptedException {
         loginPage.login(username, password);
     }
 
